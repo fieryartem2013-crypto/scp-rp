@@ -1,0 +1,12 @@
+"darkrp"
+{
+	"base"		"sandbox"
+	"title"		"SCP RP | DarkRP"
+	"maps"		"^rp_"
+	"menusystem"	"1"
+	"workshopid"	""
+
+	"settings"
+	{
+	}
+}

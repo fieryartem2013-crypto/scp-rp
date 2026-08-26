@@ -1,0 +1,6 @@
+{
+	"title": "SCP RP | DarkRP [Helix Framework]",
+	"type": "gamemode",
+	"tags": ["roleplay", "build"],
+	"ignore": ["*.md", "*.zip", "*.sh", ".git*"]
+}

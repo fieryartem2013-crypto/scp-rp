@@ -1,0 +1,12 @@
+# Сборки (пересобирай через build_release.sh)
+*.zip
+dist/
+
+# Системное
+.DS_Store
+Thumbs.db
+
+# Секреты — никогда не коммитить
+.git-credentials
+.netrc
+*.token
