@@ -3,6 +3,8 @@
 	Клиентская точка входа.
 ------------------------------------------------------------------------------]]
 
+SCPF = SCPF or {}
+
 include("framework/sh_config.lua")
 include("framework/sh_lib.lua")
 include("framework/sh_factions.lua")

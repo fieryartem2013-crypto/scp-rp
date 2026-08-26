@@ -124,6 +124,12 @@ GMod ищет точки входа строго по именам:
 Если переименовать `init.lua` во что-то другое — появится ошибка
 «Couldn't include file 'gamemode/init.lua'» и гейммод не загрузится.
 
+**Папка `framework/` обязана лежать внутри `gamemode/`**, а не в `lua/`.
+`include()` в GMod резолвит путь относительно папки вызывающего файла,
+поэтому `include("framework/sh_config.lua")` из `gamemode/shared.lua` ищет
+`gamemode/framework/sh_config.lua`. Если положить framework в `lua/`,
+фреймворк молча не загрузится и хуки упадут с «attempt to index global 'SCPF'».
+
 ## Структура файлов
 
 ```

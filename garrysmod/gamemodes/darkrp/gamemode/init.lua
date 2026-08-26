@@ -5,6 +5,10 @@
 	потом серверные модули.
 ------------------------------------------------------------------------------]]
 
+-- Гарантируем, что таблица SCPF существует ДО любых include.
+-- Без этого при сбое загрузки фреймворка хуки падают с "attempt to index global 'SCPF'".
+SCPF = SCPF or {}
+
 include("shared.lua")
 
 include("framework/sh_config.lua")
@@ -128,12 +132,14 @@ end)
 -- АФК
 -----------------------------------------------------------------------------
 hook.Add("PlayerFootstep", "SCPF_AFKReset", function(ply)
+	if not SCPF then return end
 	ply.SCPF = ply.SCPF or {}
 	ply.SCPF.LastMove = CurTime()
 	if ply.SCPF_AFK then ply.SCPF_AFK = false end
 end)
 
 hook.Add("Think", "SCPF_AFKCheck", function()
+	if not SCPF or not SCPF.NotifyTypes then return end
 	if SCPF.AFKNext and SCPF.AFKNext > CurTime() then return end
 	SCPF.AFKNext = CurTime() + 10
 	for _, ply in ipairs(player.GetAll()) do
