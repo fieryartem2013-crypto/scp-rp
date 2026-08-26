@@ -1,7 +1,11 @@
 --[[----------------------------------------------------------------------------
-	SCP FRAMEWORK — sv_init.lua
-	Серверная точка входа.
+	SCP RP | DarkRP — init.lua
+	СЕРВЕРНАЯ ТОЧКА ВХОДА. GMod грузит именно gamemode/init.lua.
+	Обязательно: сначала shared.lua (там DeriveGamemode и GM.Name),
+	потом серверные модули.
 ------------------------------------------------------------------------------]]
+
+include("shared.lua")
 
 include("framework/sh_config.lua")
 include("framework/sh_lib.lua")

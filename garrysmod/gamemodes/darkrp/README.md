@@ -114,6 +114,16 @@ New Game → справа список гейммодов → ищи **«SCP RP 
 
 ---
 
+## ⚠️ Важно про структуру файлов
+
+GMod ищет точки входа строго по именам:
+- сервер → `gamemodes/darkrp/gamemode/init.lua`
+- клиент → `gamemodes/darkrp/gamemode/cl_init.lua`
+- общее  → `gamemodes/darkrp/gamemode/shared.lua`
+
+Если переименовать `init.lua` во что-то другое — появится ошибка
+«Couldn't include file 'gamemode/init.lua'» и гейммод не загрузится.
+
 ## Структура файлов
 
 ```
@@ -131,9 +141,9 @@ darkrp/
 │   ├── sh_characters.lua   # персонажи
 │   └── sh_schema.lua       # хуки схемы
 ├── gamemode/
-│   ├── shared.lua          # точка входа
+│   ├── shared.lua          # общая точка входа (DeriveGamemode, GM.Name)
 │   ├── cl_init.lua         # клиент
-│   ├── sv_init.lua         # сервер
+│   ├── init.lua            # сервер (GMod грузит именно init.lua!)
 │   ├── cl_fonts.lua        # шрифты
 │   ├── cl_notify.lua       # уведомления
 │   ├── cl_hud.lua          # HUD
