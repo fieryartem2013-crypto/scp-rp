@@ -6,7 +6,7 @@
 SCPF = SCPF or {}
 
 SCPF.Name       = "SCP RP | DarkRP"
-SCPF.Version    = "1.0.0"
+SCPF.Version    = "1.0.2"
 SCPF.Build      = "2026-08-26"
 SCPF.Author     = "Arena.ai"
 SCPF.Description = "SCP RP на базе Helix-архитектуры. Ищи в меню как «SCP RP | DarkRP»."

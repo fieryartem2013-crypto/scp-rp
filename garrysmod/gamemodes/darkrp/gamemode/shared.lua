@@ -8,7 +8,7 @@ DeriveGamemode("sandbox")
 GM.Name    = "SCP RP | DarkRP"
 GM.Folder  = "gamemodes/darkrp"
 GM.Author  = "Arena.ai"
-GM.Version = "1.0.0"
+GM.Version = "1.0.2"
 GM.TeamBased = true
 
 --[[--------------------------------------------------------------------------
