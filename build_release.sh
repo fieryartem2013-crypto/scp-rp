@@ -45,7 +45,7 @@ python3 - "$SRC" "$VERSION" <<'PY'
 import re, sys
 src, ver = sys.argv[1], sys.argv[2]
 for path, pattern, repl in [
-    (f"{src}/lua/framework/sh_config.lua", r'SCPF\.Version\s*=\s*"[^"]*"', f'SCPF.Version    = "{ver}"'),
+    (f"{src}/gamemode/framework/sh_config.lua", r'SCPF\.Version\s*=\s*"[^"]*"', f'SCPF.Version    = "{ver}"'),
     (f"{src}/gamemode/shared.lua",         r'GM\.Version\s*=\s*"[^"]*"',   f'GM.Version = "{ver}"'),
 ]:
     try:

@@ -137,32 +137,32 @@ darkrp/
 ├── gamemode.info
 ├── addon.json
 ├── README.md
-├── lua/framework/
-│   ├── sh_config.lua       # все настройки
-│   ├── sh_lib.lua          # ядро: net, хуки, утилиты
-│   ├── sh_factions.lua     # фракции
-│   ├── sh_departments.lua  # департаменты
-│   ├── sh_jobs.lua         # джобы (28+)
-│   ├── sh_whitelist.lua    # вайтлисты
-│   ├── sh_characters.lua   # персонажи
-│   └── sh_schema.lua       # хуки схемы
-├── gamemode/
-│   ├── shared.lua          # общая точка входа (DeriveGamemode, GM.Name)
-│   ├── cl_init.lua         # клиент
-│   ├── init.lua            # сервер (GMod грузит именно init.lua!)
-│   ├── cl_fonts.lua        # шрифты
-│   ├── cl_notify.lua       # уведомления
-│   ├── cl_hud.lua          # HUD
-│   ├── cl_f4.lua           # F4-меню
-│   ├── cl_scoreboard.lua   # скорборд
-│   ├── cl_charmenu.lua     # создание персонажа
-│   ├── sv_jobs.lua         # смена джоб
-│   ├── sv_money.lua        # экономика
-│   ├── sv_arrest.lua       # задержание
-│   ├── sv_doors.lua        # двери
-│   ├── sv_breach.lua       # нарушение содержания
-│   ├── sv_commands.lua     # команды
-│   ├── sv_spawns.lua       # точки спавна
+└── gamemode/
+    ├── framework/          # ⚠️ ОБЯЗАТЕЛЬНО внутри gamemode/, не в lua/
+    │   ├── sh_config.lua       # все настройки
+    │   ├── sh_lib.lua          # ядро: net, хуки, утилиты
+    │   ├── sh_factions.lua     # фракции
+    │   ├── sh_departments.lua  # департаменты
+    │   ├── sh_jobs.lua         # джобы (28+)
+    │   ├── sh_whitelist.lua    # вайтлисты
+    │   ├── sh_characters.lua   # персонажи
+    │   └── sh_schema.lua       # хуки схемы
+    ├── shared.lua          # общая точка входа (DeriveGamemode, GM.Name)
+    ├── cl_init.lua         # клиент
+    ├── init.lua            # сервер (GMod грузит именно init.lua!)
+    ├── cl_fonts.lua        # шрифты
+    ├── cl_notify.lua       # уведомления
+    ├── cl_hud.lua          # HUD
+    ├── cl_f4.lua           # F4-меню
+    ├── cl_scoreboard.lua   # скорборд
+    ├── cl_charmenu.lua     # создание персонажа
+    ├── sv_jobs.lua         # смена джоб
+    ├── sv_money.lua        # экономика
+    ├── sv_arrest.lua       # задержание
+    ├── sv_doors.lua        # двери
+    ├── sv_breach.lua       # нарушение содержания
+    ├── sv_commands.lua     # команды
+    ├── sv_spawns.lua       # точки спавна
 │   └── sv_admin.lua        # админ-действия
 └── entities/
     ├── weapons/            # ПУСТО (нужно создать)
@@ -173,7 +173,7 @@ darkrp/
 
 ## Настройка
 
-Все цифры в `lua/framework/sh_config.lua`:
+Все цифры в `gamemode/framework/sh_config.lua`:
 - Деньги, зарплата, арест, брич, инвентарь, уровни доступа
 
 Вайтлисты: `data/scpf/whitelists/<faction|jobid>.txt` (SteamID64 по строке)
